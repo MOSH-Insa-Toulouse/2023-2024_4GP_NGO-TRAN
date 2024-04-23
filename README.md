@@ -22,13 +22,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'objectif est donc de pouvoir réaliser un dispositif permettant la mesure de déformation à partir d'un capteur low-tech. En passant par différentes étapes : simulations électroniques, design du PCB, code arduino et réalisation de datasheet.
 
 ## Livrables
-- Un Shield PCB relié à une carte arduino UNO avec différents composants : un capteur graphite, un amplificateur transimpédance et un module bluetooth. Il peut également avoir un écran OLED, un flex sensor commercial, un potentiomètre digital, encodeur rotatoire ou des boutons.
-- Un code arduino qui gère les différents composants cités précédemments (mesures de contraintes, échanges bluetooth et OLED, potentiomètre digital et boutons)
+- Un Shield PCB relié à une carte arduino UNO avec différents composants : un capteur graphite, un amplificateur transimpédance et un module bluetooth. Il peut également avoir un écran OLED, un flex sensor commercial, un potentiomètre digital, encodeur rotatoire.
+- Un code arduino qui gère les différents composants cités précédemments (mesures de contraintes, échanges bluetooth et OLED, potentiomètre digital et encodeur rotatoire)
 - Une application Android (sous MIT App Inventor) interfaçant le PCB et le code arduino.
 - Un code arduino réalisant les essais de banc de test sur les mesures de contraintes.
 - Une datasheet sur le capteur de contrainte.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons opté pour l'ajout d'un écran OLED, du flex sensor commercial, du potentiomètre digital. Egalement, nous avons choisi l'implémentation de 3 boutons plutôt que de l'encodeur rotatoire.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons opté pour l'ajout d'un écran OLED, du flex sensor commercial, du potentiomètre digital et de l'encodeur rotatoire.
 
 ## Matériel nécessaire
 Pour réaliser notre dispositif électronique, voici la liste des composants nécessaires :
@@ -41,7 +41,7 @@ Pour réaliser notre dispositif électronique, voici la liste des composants né
 - Module Bluetooth HC05
 - Ecran OLED 128x64
 - Flex Sensor
-- 3 boutons
+- Encodeur rotatoire
 
 
 ## Simulation électronique du capteur sous LTSpice
@@ -78,47 +78,10 @@ On remarque que le bruit est bien atténué, à 50Hz, il est atténue d'environ 
 
 ## Design du PCB sous KiCad
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afin de réaliser notre PCB, nous avons reproduit le circuit précédent sur Kicad 7.0. 
-Nous avons remplacé la résistance R2 par un potentiomètre numérique afin de pouvoir faire varier le gain de notre AOP. Egalement, nous avons rajouté divers composants afin de pouvoir mesurer efficacement notre capteur graphite et comparé les résultats obtenus :
-- un flexsensor servant de témoin, afin de pouvoir comparer nos mesures avec celle du capteur en graphite
-- un module bluetooth HC-05 afin de pouvoir communiquer avec notre circuit depuis notre téléphone depuis une application mobile que nous coderons nous-même. 
-- un écran OLED ainsi que trois boutons poussoirs afin de pouvoir visualiser le résultats de nos mesures et pouvoir naviguer simplement dans les différents menus permettant diverses mesures
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tous nos composants seront installés sur un shield d'Arduino UNO. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons commencé par réaliser les symboles des différents composants et reproduire le schéma électrique complet sur Kicad. Voici le schéma électrique de l'ensemble de notre montage :
-
-![Schema_Kicad](/Images/Kicad/Schematic.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons par la suite réalisé les empreintes de nos composants afin de les placer sur notre PCB. Notre difficulté principale a été de placer les composants de sorte qu'il n'y ait pas de via, notamment pour le GND. Voici le résultat final :
-
-![PCB_Kicad](/Images/Kicad/PCB_rooting.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Et voici le rendu 3D que nous obtenu avec ces routages : 
-
-![3D_PCB_Kicad](/Images/Kicad/3DModel.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toutes les ressources utilisées pour notre Kicad (empreintes, schéma etc...) sont disponibles dans notre [dossier Kicad](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Kicad).
 
 ## Code arduino
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons utilisé l'IDE Arduino 2.3.2. Nous avons utilisé les librairies SoftwareSerial pour le bluetooth et Adafruit_SSD1306 pour l'écran OLED. Sur cette dernière, elle utilise beaucoup de RAM pour les buffers, cette utilisation de RAM n'est pas affiché par l'IDE Arduino. Il se peut que le programme ne se lance pas si une attention n'a pas été porté sur cette utilisation de RAM. Pour éviter cela, on peut utiliser  la fonction ["F()"](https://www.arduino.cc/reference/en/language/variables/utilities/progmem/), utiliser des librairies pour l'écran OLED moins gourmandes ou enfin diminuer la résolution de l'écran.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans le [dossier arduino](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Arduino) se trouve les différents fichiers pour tester les multiples éléments du dispositif. \
-Concernant le [fichier principal](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Arduino/Main/Main.ino) : lors de la mise sous tension de l'arduino, une première calibration du potentiomètre digitale est faite en fonction de la valeur mesurée sur le capteur graphite. 
-Suite à cela, le dispositif est par défaut dans le menu déroulant avec 4 choix : 
-- une mesure instantannée toutes les 500 ms
-- une mesure moyennée sur 2500 ms
-- une mesure du flex sensor commercial et enfin 
-- une calibration du potentiomètre digital
-
-<img src="https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/Menu.png" alt="Menu" style="width:500px;height:500px;">
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le choix de menu se fait grâce aux 3 boutons : un pour descendre dans le menu, un pour monter dans le menu et un troisième pour valider le choix. Ce dernier bouton de validation sert également à sortir du menu choisi.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chaque choix du menu appel une fonction différente qui réalise sa mesure et qui est envoyé à la fonction DisplayAndTransmitter afin de l'afficher sur l'écran OLED et l'envoyer sur l'application bluetooth. Tant que le bouton central de "validation" n'est pas appuyé, on reste dans cette boucle de mesure et d'affichage.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le calcul de la résistance du capteur en graphite se fait avec : $$Res=R1*(1+\frac{R3}{R2})*\frac{Vcc}{Vadc}-R1-R5$$ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Et dans notre cas, notre résistance R2 est variable : c'est celle du potentiomètre digital qui est calculé avec : $`R2=\frac{47500*pos}{256}+125`$ où notre $47500$ correspond à la valeur de résistance maximale de notre MCP41050 et $pos$ la position du potentiomètre parmi les 256 valeurs.
 
 
 ## Application android APK sous MIT App Inventor
@@ -160,11 +123,6 @@ Suite à cela, le dispositif est par défaut dans le menu déroulant avec 4 choi
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On remarque que la résistance augmente lorsque l'on met le capteur en tension et qu'elle diminue lors de la compression de ce dernier. En tension, la distance entre les atomes de carbones augmente et la résistance augmente avec. Le contraire se produit pour la compression. \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En fonction de la dureté du crayon utilisé, les variations relatives de résistance changent. Plus le crayon est gras (2H->H->HB->B->2B avec 2B avec le plus de carbone), moins sa variation relative de résistance est élevée.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De plus, contrairement, à l'article "Pencil Drawn Strain Gauges and Chemiresistors on Paper" (Cheng-Wei Lin*, Zhibo Zhao*, Jaemyung Kim & Jiaxing Huang), nous avons pu mesurer la résistance avec un crayon 2H.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Néanmoins, toutes ces mesures sont à prendre avec du recul au vu des conditions non reproductibles d'essai. En effet, la quantité de graphite déposée au crayon à papier est très variable, induisant ainsi une résistance très variable. Il serait intéressant de développer une méthode afin de déposer une quantité fixe et reproductible de graphite. Egalement, le potentiomètre digital, qui permet de régler le gain du montage transimpédance, semble renvoyer des valeurs incohérentes lorsqu'elles sont lues à l'arduino A1. Il faudrait approfondir la recherche. Nous avons émis l'hypothèse que cela soit les capacités qui nuisent à la mesure, sans plus de recherche.
-
 
 ## Datasheet
 
