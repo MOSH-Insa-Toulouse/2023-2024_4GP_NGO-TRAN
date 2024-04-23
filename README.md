@@ -33,7 +33,7 @@
 ## Matériel nécessaire
 Pour réaliser notre dispositif électronique, voici la liste des composants nécessaires :
 
-- Résistances : 1 de 1 $k\ohm$, 1 de $10k\ohm$, 2 de $100k\ohm$ pour l'amplificateur transimpédance. 3 de $10k\ohm$ pour les boutons (peuvent être éviter en utilisant les résistances internes de l'arduino) et 1 de $47k\ohm$ pour le flex sensor.
+- Résistances : 1 de 1 $k\ohm$, 1 de $10k\ohm$, 2 de $100k\ohm$ pour l'amplificateur transimpédance. 3 de $10k\ohm$ pour les boutons (peuvent être éviter en utilisant les résistances internes de l'arduino) et 1 de $33k\ohm$ pour le flex sensor.
 - Capacités : 3 de 100 nF, 1 de 1 uF
 - Arduino Uno
 - Amplificateur opérationnel LTC1050
@@ -95,18 +95,7 @@ On remarque que le bruit est bien atténué, à 50Hz, il est atténue d'environ 
 
 ## Réalisation du shield
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grâce à notre Kicad, nous avons pu éditer un masque de gravure de notre PCB. Nous avons envoyé notre projet Kicad à Cathy qui s'est chargée de l'imprimer. Elle a ensuite insolé aux UV une plaque d'Epoxy recouverte d'une fine couche de cuivre et d'une résine photosensible. Puis, elle a plongé la plaquette insolée dans du révélateur afin de retirer la résine non insolée, puis dans du perchlorure de fer afin de graver les pistes. Enfin, elle a nettoyé notre plaquette avec de l'acétone afin de retirer la résine restante. Merci beaucoup à Cathy qui a pris le temps de tirer notre PCB et nous expliquer le processus de fabrication!
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons ensuite procéder au perçage de notre plaquette afin de pouvoir installer nos différents composants selon le schéma du PCB obtenu grâce à Kicad. Une fois le perçage terminé, nous avons soudé nos composants à la plaquette.
-
-![perçage de notre PCB](https://github.com/2023-2024_4GP_NGO-TRAN/blob/main/Images/PCB_Percage.jpg)
-
-![soudage de notre PCB](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/PCB_Soudage.jpg)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lors de cette étape, l'installation de nos composants a été plus compliquée que prévue. En effet, l'ensemble de nos trous étaient légèrement décalés par rapport à leur emplacement prévu. L'origine de ce problème n'a pas été clairement établie.
-
-![PCB final](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/PCB_Final.jpg)
 
 
 ## Banc de test
