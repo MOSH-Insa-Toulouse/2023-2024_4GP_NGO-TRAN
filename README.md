@@ -181,20 +181,20 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour spécifier notre capteur et son montage transimpédance, nous avons décidé d'utiliser des demis-cercles avec un rayon différents.
 
-![Image Banc de Test](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/Banc_de_test-Pyramide.png)
+![Image Banc de Test](data-test-bench/banc-test.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ce sont des demis-cercles, imprimés en 3D, avec un diamètre commençant à 2 cm pour le plus petit et en augmentant de 0.5 cm par créneau. Le plus grand demi-cercle a un diamètre de 5cm. Grâce à ces demis-cercles, nous allons pouvoir calculer la variation de la résistance électrique $\frac{\Delta R}{R_0}$ en fonction de la déformation $\epsilon=\frac{e}{D}$. Nous avons ici mesuré notre épaisseur de notre papier $e=0.2 mm$. Ainsi, nous avons une déformation variant de 0.1 pour le plus petit diamètre à 0.04 pour le plus grand. Voici les courbes caractéristiques pour des crayons 2B, B et HB pour [des tensions ou des compressions.](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Images/Compression-Tension.png)
 
-![Compression](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/Compression.png)
+![Compression](data-test-bench/Compression.png)
 
-![Tension](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/Tension.png)
+![Tension](data-test-bench/Tension.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On remarque que la résistance augmente lorsque l'on met le capteur en tension et qu'elle diminue lors de la compression de ce dernier. En tension, la distance entre les atomes de carbones augmente et la résistance augmente avec. Le contraire se produit pour la compression. \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En fonction de la dureté du crayon utilisé, les variations relatives de résistance changent. Plus le crayon est gras (2H->H->HB->B->2B avec 2B avec le plus de carbone), moins sa variation relative de résistance est élevée.
 
 ## Datasheet
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vous pouvez retrouver la datasheet du produit [ici](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/datasheet.pdf)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vous pouvez retrouver la datasheet du produit [ici](datasheet/Datasheet-GrapheSenso.pdf).
 
 
 ## Contact
