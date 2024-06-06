@@ -80,7 +80,7 @@ Pour réaliser notre dispositif électronique, voici la liste des composants né
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour amplifier le signal de notre capteur de graphite, caractérisé par une résistance élevée et un courant de sortie faible, nous avons conçu un montage à transimpédance. Ce montage, basé sur un amplificateur opérationnel (AOP), permet de convertir le faible courant en une tension exploitable par le convertisseur analogique-numérique (ADC) de l'Arduino UNO. \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;La conception du circuit a été simulée sur LTspice, en suivant un [schéma spécifique](Image/LTspice/schema_suggere.png). Le choix de l'AOP s'est porté sur le LTC 1050, reconnu pour sa capacité à gérer des courants d'entrée faibles et son faible offset de tension, garantissant ainsi la précision des mesures. Voici son schéma :
 
-![capteur_graphite](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/LTspice/Schema_complet.png)
+![electronic-circuit](Image/LTspice/Schema_complet_full.png)
 
 Afin d'optimiser la qualité du signal, trois filtres ont été intégrés au circuit :
 
@@ -98,13 +98,13 @@ Les tests effectués sur le circuit simulé ont confirmé l'efficacité des filt
 
 Voici la réponse de notre circuit pour vérfier que le capteur soit correctement amplifié : 
 
-![Test_En_Transient](/Images/LTspice/1V-Capteur.png)
+![Test_En_Transient](Image/LTspice/1V-Capteur.png)
 	
 Le signal amplifié atteint 1V, une valeur compatible avec l'Arduino UNO.
 
 De plus, la simulation d'un courant alternatif a démontré une atténuation significative du bruit, notamment une réduction d'environ 72 dB à 50 Hz.
 
-![Test_En_AC](/Images/LTspice/AC-Capteur.png)
+![Test_En_AC](Image/LTspice/AC-Capteur.png)
 
 
 
