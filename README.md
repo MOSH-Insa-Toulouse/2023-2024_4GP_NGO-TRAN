@@ -147,7 +147,15 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 
 ## Réalisation du shield
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans le cadre de notre projet, nous avons réalisé la fabrication d'un circuit imprimé (PCB) au sein des départements de Génie Électrique et Informatique et de Génie Physique de l'INSA Toulouse. Après avoir conçu le circuit sur le logiciel KICAD, nous avons confié l'impression à Cathy.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le processus de fabrication a débuté par l'impression de notre modèle sur du papier calque, qui a ensuite servi de masque pour l'insolation UV d'une plaquette d'époxy cuivrée. L'exposition aux UV a duré une dizaine de minutes, après quoi la résine non exposée a été éliminée à l'aide d'un révélateur. La plaquette a ensuite été plongée dans un bain de perchlorure de fer pendant 7 à 9 minutes pour dissoudre le cuivre non protégé, révélant ainsi les pistes du circuit. Un rinçage à l'acétone a finalisé le processus, nous permettant d'obtenir un PCB conforme à notre conception initiale.
+
+[Image du processus de fabrication du PCB]
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une fois le PCB fabriqué, nous avons procédé à son assemblage. Cela a nécessité le perçage de trous de deux tailles différentes, 0,8 mm et 1 mm, selon les spécifications de notre projet KICAD. Les trous de 0,8 mm ont été utilisés pour les composants tels que les AOP LTC1050, les résistances et les condensateurs, tandis que les trous de 1 mm ont servi pour les broches de connexion de l'Arduino Uno et les headers des modules OLED, Bluetooth et encodeur rotatif. Après le perçage, nous avons soudé les composants en place à l'aide d'étain pour garantir des connexions électriques solides.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous tenons à remercier chaleureusement Cathy pour son aide précieuse dans la réalisation de notre PCB. Son expertise et son soutien ont été essentiels pour mener à bien cette étape cruciale de notre projet.
 
 
 ## Banc de test
