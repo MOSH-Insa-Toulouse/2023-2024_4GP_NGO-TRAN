@@ -143,7 +143,7 @@ Une visualisation 3D du PCB a été générée pour vérifier le routage et l'ag
 
 Toutes les ressources utilisées pour la conception du PCB, y compris les empreintes, le schéma et les fichiers de conception, sont disponibles dans notre dossier KiCad.
 
-## Code arduino
+## Code Arduino
 
 ![code](Arduino/ARDUINO_DIAGRAMME.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre [programme Arduino](Arduino/Projet_Capteur_Final.ino) permet de mesurer la résistance du capteur en graphène et du flex sensor en convertissant les valeurs de tension obtenues par l'ADC de l'Arduino. Les valeurs de résistance sélectionnées sont ensuite affichées sur l'écran OLED, la sélection étant contrôlée par l'encodeur rotatif.
@@ -159,8 +159,8 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une application est également disponible avec le dispositif : développé sous [MIT App Inventor](https://appinventor.mit.edu/) . 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application reçoit les données transmis par le module bluetooth HC-05. Elle affiche ensuite la valeur tranmis (des $M\ohm$ pour le capteur graphite ou des $\ohm$ pour le flex sensor.
+![blocinitial](apk/Face d'avant.png)
 
-<img src="apk/Face d'avant.png" alt="Android" style="width:500px;height:1000px;">
 ![blocinitial](apk/Bloc d'initialisation.png)
 ![blocfonctionnement](apk/block de fonctionnement.png)
 
