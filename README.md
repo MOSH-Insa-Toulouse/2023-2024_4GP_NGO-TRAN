@@ -179,18 +179,27 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 
 ## Banc de test
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour spécifier notre capteur et son montage transimpédance, nous avons décidé d'utiliser des demis-cercles avec un rayon différents.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afin de caractériser notre capteur et son montage transimpédance, nous avons opté pour des demi-cercles imprimés en 3D de diamètres croissants (de 2 cm à 5 cm par incréments de 0,5 cm). Cette configuration nous permet d'évaluer l'évolution de la résistance électrique en fonction de la déformation appliquée.
 
 ![Image Banc de Test](data-test-bench/banc-test.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ce sont des demis-cercles, imprimés en 3D, avec un diamètre commençant à 2 cm pour le plus petit et en augmentant de 0.5 cm par créneau. Le plus grand demi-cercle a un diamètre de 5cm. Grâce à ces demis-cercles, nous allons pouvoir calculer la variation de la résistance électrique $\frac{\Delta R}{R_0}$ en fonction de la déformation $\epsilon=\frac{e}{D}$. Nous avons ici mesuré notre épaisseur de notre papier $e=0.2 mm$. Ainsi, nous avons une déformation variant de 0.1 pour le plus petit diamètre à 0.04 pour le plus grand. Voici les courbes caractéristiques pour des crayons 2B, B et HB pour [des tensions ou des compressions.](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Images/Compression-Tension.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grâce à ces demis-cercles, nous allons pouvoir calculer la variation de la résistance électrique $\frac{\Delta R}{R_0}$ en fonction de la déformation $\epsilon=\frac{e}{D}$. Nous avons ici mesuré notre épaisseur de notre papier $e=0.2 mm$. ALes mesures effectuées sur papier d'épaisseur constante (0,1 mm pour le plus petit diamètre, 0,04 mm pour le plus grand) révèlent des courbes caractéristiques distinctes pour les crayons 2B, B et HB, en tension comme en compression.
 
 ![Compression](data-test-bench/Compression.png)
 
 ![Tension](data-test-bench/Tension.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On remarque que la résistance augmente lorsque l'on met le capteur en tension et qu'elle diminue lors de la compression de ce dernier. En tension, la distance entre les atomes de carbones augmente et la résistance augmente avec. Le contraire se produit pour la compression. \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En fonction de la dureté du crayon utilisé, les variations relatives de résistance changent. Plus le crayon est gras (2H->H->HB->B->2B avec 2B avec le plus de carbone), moins sa variation relative de résistance est élevée.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous observons une augmentation de la résistance en tension (éloignement des atomes de carbone) et une diminution en compression (rapprochement des atomes). De plus, la variation relative de résistance est inversement proportionnelle à la quantité de carbone présente dans le crayon (2H < H < HB < B < 2B).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contrairement aux travaux de Cheng-Wei Lin et al. ("Pencil Drawn Strain Gauges and Chemiresistors on Paper"), nous avons réussi à mesurer la résistance avec un crayon 2H.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En comparaison avec un capteur de flexion commercial, notre dispositif semble moins sensible et moins résistant aux fortes déformations, limitant son nombre d'utilisations, cependant, ils peuvent être utilisés dans deux directions, ce qui constitue une nette amélioration par rapport aux capteurs commerciaux utilisés dans une seule direction.
+
+![flex-sensor](data-test-bench/flex-sensor.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Il est important de noter que ces résultats sont à interpréter avec prudence, compte tenu des conditions expérimentales variables (quantité de graphite déposée, méthode de déformation).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour améliorer la reproductibilité, nous recommandons l'utilisation d'un servo-moteur pour contrôler précisément la déformation et la quantité de graphite déposée. Alternativement, des cercles de diamètres connus pourraient être reproduits avec des déformations plus faibles pour préserver l'intégrité du capteur.
 
 ## Datasheet
 
