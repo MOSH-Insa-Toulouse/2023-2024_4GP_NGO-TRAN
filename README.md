@@ -146,7 +146,7 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 ## Code arduino
 
 ![code](Arduino/ARDUINO_DIAGRAMME.png)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre programme Arduino permet de mesurer la résistance du capteur en graphène et du flex sensor en convertissant les valeurs de tension obtenues par l'ADC de l'Arduino. Les valeurs de résistance sélectionnées sont ensuite affichées sur l'écran OLED, la sélection étant contrôlée par l'encodeur rotatif.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre [programme Arduino] (Arduino/Projet_Capteur_Final.ino) permet de mesurer la résistance du capteur en graphène et du flex sensor en convertissant les valeurs de tension obtenues par l'ADC de l'Arduino. Les valeurs de résistance sélectionnées sont ensuite affichées sur l'écran OLED, la sélection étant contrôlée par l'encodeur rotatif.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le programme établit également une communication bidirectionnelle entre le module Bluetooth et l'application mobile. Des protocoles spécifiques ont été mis en place pour gérer l'échange de données et de commandes. Le module Bluetooth reçoit les instructions de l'application mobile, telles que la demande de données ou le réglage de la résistance du potentiomètre numérique, et transmet les données mesurées en retour.
 
