@@ -74,13 +74,13 @@ Pour réaliser notre dispositif électronique, voici la liste des composants né
 
 ![capteur_graphite](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/blob/main/Images/LTspice/Schema_complet.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afin d'optimiser la qualité du signal, trois filtres ont été intégrés au circuit :
+Afin d'optimiser la qualité du signal, trois filtres ont été intégrés au circuit :
 
 - Un filtre passe-bas passif (R1, C1) à l'entrée, avec une fréquence de coupure de 16 Hz, pour atténuer les bruits en courant.
 - Un filtre passe-bas actif (R3, C4) couplé à l'AOP, avec une fréquence de coupure de 1,6 Hz, pour filtrer le bruit à 50 Hz du réseau électrique.
 - Un filtre passe-bas (R6, C2) à la sortie de l'AOP, avec une fréquence de coupure de 1,6 kHz, pour éliminer les bruits générés lors du traitement du signal.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De plus, des composants supplémentaires ont été ajoutés pour améliorer la robustesse du circuit :
+De plus, des composants supplémentaires ont été ajoutés pour améliorer la robustesse du circuit :
 - La capacité C3 pour filtrer le bruit de l'alimentation.
 - La résistance R5 pour protéger l'AOP contre les décharges électrostatiques et former un filtre passe-bas avec C1 pour les bruits en tension.
 - La résistance R2, qui sera remplacée par un potentiomètre numérique pour ajuster le gain de l'AOP selon les besoins.
