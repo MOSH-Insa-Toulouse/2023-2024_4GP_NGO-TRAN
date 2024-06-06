@@ -65,7 +65,7 @@ Pour réaliser notre dispositif électronique, voici la liste des composants né
 - Module Bluetooth HC05
 - Ecran OLED 128x64
 - Flex Sensor
-- Encodeur rotatoire
+- Encodeur rotatif KY-040
 
 
 ## Simulation électronique du capteur sous LTSpice
