@@ -23,13 +23,36 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre objectif principal était de développer un dispositif de mesure de déformation basé sur un capteur low-tech. Pour atteindre cet objectif, nous avons suivi une démarche structurée comprenant plusieurs étapes clés : simulations électroniques pour valider le concept, conception du circuit imprimé (PCB) pour intégrer le capteur, développement du code Arduino pour l'acquisition et le traitement des données, et enfin, réalisation de la fiche technique du dispositif.
 
 ## Livrables
-- Un Shield PCB relié à une carte arduino UNO avec différents composants : un capteur graphite, un amplificateur transimpédance et un module bluetooth. Il peut également avoir un écran OLED, un flex sensor commercial, un potentiomètre digital, encodeur rotatoire.
-- Un code arduino qui gère les différents composants cités précédemments (mesures de contraintes, échanges bluetooth et OLED, potentiomètre digital et encodeur rotatoire)
-- Une application Android (sous MIT App Inventor) interfaçant le PCB et le code arduino.
-- Un code arduino réalisant les essais de banc de test sur les mesures de contraintes.
-- Une datasheet sur le capteur de contrainte.
+Les livrables de ce projet sont les suivants :
+  
+* Un shield PCB personnalisé connecté à une carte Arduino UNO. Ce shield intègre :
+     
+   - Un capteur de contrainte innovant à base de graphite.
+   - Un amplificateur à transimpédance pour traiter le signal du capteur.
+   - Un module Bluetooth pour la communication sans fil.
+   - Un écran OLED pour l'affichage des données (ajouté pour améliorer l'expérience utilisateur).
+   - Un capteur de flexion commercial pour comparaison (ajouté à des fins de validation).
+   - Un potentiomètre numérique pour ajuster le gain de l'amplificateur (ajouté pour plus de flexibilité).
+   - Un encodeur rotatif pour basculer entre les mesures des capteurs (ajouté pour faciliter la comparaison).
+  
+* Code Arduino     
+   - L'acquisition des mesures de contrainte du capteur graphite.
+   - La connexion et la communication Bluetooth.
+   - L'affichage des données sur l'écran OLED.
+   - Le réglage du gain via le potentiomètre numérique.
+   - La sélection du capteur actif avec l'encodeur rotatif.
+   - Réaliser des essais de banc de test rigoureux.
+   - Évaluer les performances du capteur de contrainte graphite.
+  
+* Une application Android intuitive (APK) (développée avec MIT App Inventor) qui :
+   - Permet de visualiser les données en temps réel.
+   - Offre une interface conviviale pour interagir avec le système.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons opté pour l'ajout d'un écran OLED, du flex sensor commercial, du potentiomètre digital et de l'encodeur rotatoire.
+* Une datasheet complète qui détaille :
+   - Les caractéristiques techniques du capteur graphite.
+   - Son principe de fonctionnement.
+   - Les instructions d'utilisation et de calibration.
+   - Les résultats des tests de performance.
 
 ## Matériel nécessaire
 Pour réaliser notre dispositif électronique, voici la liste des composants nécessaires :
