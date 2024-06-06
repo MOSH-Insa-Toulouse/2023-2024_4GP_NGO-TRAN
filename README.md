@@ -102,7 +102,25 @@ De plus, la simulation d'un courant alternatif a démontré une atténuation sig
 
 ## Design du PCB sous KiCad
 
+Pour développer notre circuit imprimé (PCB), nous avons utilisé le logiciel KiCad 7.0 et avons reproduit le schéma électrique initial, en y apportant quelques modifications. La résistance R2 a été remplacée par un potentiomètre numérique pour permettre le réglage du gain de l'AOP.
 
+Afin d'optimiser les capacités de mesure et de comparaison de notre capteur graphite, nous avons intégré plusieurs composants supplémentaires :
+
+- GrapheSenso (notre capteur graphite) pour mesurer les variations de résistance.
+- Un flex sensor commercial servant de référence pour comparer les résultats.
+- Un module Bluetooth HC-05 pour établir une communication sans fil avec une application mobile dédiée.
+- Un écran OLED pour visualiser les mesures en temps réel.
+- Un encodeur rotatif pour basculer facilement entre les deux capteurs dans l'interface de l'application.
+
+Tous ces composants ont été soigneusement disposés sur un shield Arduino UNO pour faciliter l'intégration et l'utilisation.
+
+La première étape de la conception du PCB a consisté à créer les symboles des différents composants et à reproduire le schéma électrique complet dans KiCad. Le schéma final intègre tous les éléments mentionnés ci-dessus.
+
+Ensuite, nous avons réalisé les empreintes des composants pour les placer sur le PCB. L'un des défis majeurs a été d'optimiser le placement pour éviter les vias, en particulier pour la connexion à la masse (GND). Le résultat final est un PCB compact et fonctionnel.
+
+Une visualisation 3D du PCB a été générée pour vérifier le routage et l'agencement des composants. Cette étape a permis de s'assurer de la faisabilité de la fabrication du PCB.
+
+Toutes les ressources utilisées pour la conception du PCB, y compris les empreintes, le schéma et les fichiers de conception, sont disponibles dans notre dossier KiCad.
 
 ## Code arduino
 
