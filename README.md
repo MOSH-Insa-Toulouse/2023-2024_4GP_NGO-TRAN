@@ -112,13 +112,20 @@ De plus, la simulation d'un courant alternatif a démontré une atténuation sig
 
 Pour développer notre circuit imprimé (PCB), nous avons utilisé le logiciel KiCad 7.0 et avons reproduit le schéma électrique initial, en y apportant quelques modifications. La résistance R2 a été remplacée par un potentiomètre numérique pour permettre le réglage du gain de l'AOP.
 
+![transimpedence](Image/montage_electronique.png)
+
 Afin d'optimiser les capacités de mesure et de comparaison de notre capteur graphite, nous avons intégré plusieurs composants supplémentaires :
 
 - GrapheSenso (notre capteur graphite) pour mesurer les variations de résistance.
 - Un flex sensor commercial servant de référence pour comparer les résultats.
+
+![flex-sensor](Image/Capteur_commercial_test.png)
+
 - Un module Bluetooth HC-05 pour établir une communication sans fil avec une application mobile dédiée.
 - Un écran OLED pour visualiser les mesures en temps réel.
 - Un encodeur rotatif pour basculer facilement entre les deux capteurs dans l'interface de l'application.
+
+![perpherique](Image/Peripherique.png)
 
 Tous ces composants ont été soigneusement disposés sur un shield Arduino UNO pour faciliter l'intégration et l'utilisation.
 
