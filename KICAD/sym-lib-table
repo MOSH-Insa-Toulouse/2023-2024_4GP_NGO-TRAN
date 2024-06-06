@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Library_insa")(type "KiCad")(uri "${KIPRJMOD}/Library_insa.kicad_sym")(options "")(descr ""))
+)
