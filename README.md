@@ -129,7 +129,11 @@ Une visualisation 3D du PCB a été générée pour vérifier le routage et l'ag
 Toutes les ressources utilisées pour la conception du PCB, y compris les empreintes, le schéma et les fichiers de conception, sont disponibles dans notre dossier KiCad.
 
 ## Code arduino
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre programme Arduino permet de mesurer la résistance du capteur en graphène et du flex sensor en convertissant les valeurs de tension obtenues par l'ADC de l'Arduino. Les valeurs de résistance sélectionnées sont ensuite affichées sur l'écran OLED, la sélection étant contrôlée par l'encodeur rotatif.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le programme établit également une communication bidirectionnelle entre le module Bluetooth et l'application mobile. Des protocoles spécifiques ont été mis en place pour gérer l'échange de données et de commandes. Le module Bluetooth reçoit les instructions de l'application mobile, telles que la demande de données ou le réglage de la résistance du potentiomètre numérique, et transmet les données mesurées en retour.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une fonctionnalité notable de notre programme est la possibilité de régler le gain de l'amplificateur en modifiant la valeur de résistance du potentiomètre numérique via l'interface de l'application mobile. Cette flexibilité permet d'adapter le système à différentes conditions de mesure.
 
 
 ## Application android APK sous MIT App Inventor
