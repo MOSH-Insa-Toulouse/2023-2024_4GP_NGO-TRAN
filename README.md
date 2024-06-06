@@ -159,6 +159,7 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une application est également disponible avec le dispositif : développé sous [MIT App Inventor](https://appinventor.mit.edu/) . 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application reçoit les données transmis par le module bluetooth HC-05. Elle affiche ensuite la valeur tranmis (des $M\ohm$ pour le capteur graphite ou des $\ohm$ pour le flex sensor.
+
 ![face-avant](apk/Face-d'avant.png)
 
 ![blocinitial](apk/Bloc-initialisation.png)
