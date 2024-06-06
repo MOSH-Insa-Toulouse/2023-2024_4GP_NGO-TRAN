@@ -160,9 +160,11 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application reçoit les données transmis par le module bluetooth HC-05. Elle affiche ensuite la valeur tranmis (des $M\ohm$ pour le capteur graphite ou des $\ohm$ pour le flex sensor.
 
-<img src="/Images/Appli_Android.jpg" alt="Android" style="width:500px;height:1000px;">
+<img src="apk/Face d'avant.png" alt="Android" style="width:500px;height:1000px;">
+![blocinitial](apk/Bloc d'initialisation.png)
+![blocfonctionnement](apk/block de fonctionnement.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Android/CapteurGraphite.apk) et toutes les informations liées à l'application son dans [le dossier Application Android](https://github.com/MOSH-Insa-Toulouse/2023-2024_4GP_NGO-TRAN/tree/main/Android)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](apk/First_application_copy.aia) et toutes les informations liées à l'application son dans [le dossier Application Android](apk)
 
 ## Réalisation du shield
 
