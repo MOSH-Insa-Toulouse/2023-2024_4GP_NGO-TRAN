@@ -124,15 +124,15 @@ Tous ces composants ont été soigneusement disposés sur un shield Arduino UNO 
 
 La première étape de la conception du PCB a consisté à créer les symboles des différents composants et à reproduire le schéma électrique complet dans KiCad. Le schéma final intègre tous les éléments mentionnés ci-dessus.
 
-![Schema_Kicad](/Images/Kicad/Schematic.png)
+![Schema_Kicad](Image/circuit-diagram-kicad.png)
 
 Ensuite, nous avons réalisé les empreintes des composants pour les placer sur le PCB. L'un des défis majeurs a été d'optimiser le placement pour éviter les vias, en particulier pour la connexion à la masse (GND). Le résultat final est un PCB compact et fonctionnel.
 
-![PCB_Kicad](/Images/Kicad/PCB_rooting.png)
+![PCB_Kicad](Image/PCB-Kicad.png)
 
 Une visualisation 3D du PCB a été générée pour vérifier le routage et l'agencement des composants. Cette étape a permis de s'assurer de la faisabilité de la fabrication du PCB.
 
-![3D_PCB_Kicad](/Images/Kicad/3DModel.png)
+![3D_PCB_Kicad](Image/3D_viewer.png)
 
 Toutes les ressources utilisées pour la conception du PCB, y compris les empreintes, le schéma et les fichiers de conception, sont disponibles dans notre dossier KiCad.
 
