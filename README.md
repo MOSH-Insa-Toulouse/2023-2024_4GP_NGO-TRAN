@@ -159,12 +159,12 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une application est également disponible avec le dispositif : développé sous [MIT App Inventor](https://appinventor.mit.edu/) . 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application reçoit les données transmis par le module bluetooth HC-05. Elle affiche ensuite la valeur tranmis (des $M\ohm$ pour le capteur graphite ou des $\ohm$ pour le flex sensor.
-![blocinitial](apk/Face d'avant.png)
+![face-avant](apk/Face-d'avant.png)
 
-![blocinitial](apk/Bloc d'initialisation.png)
-![blocfonctionnement](apk/block de fonctionnement.png)
+![blocinitial](apk/Bloc-initialisation.png)
+![blocfonctionnement](apk/block-fonctionnement.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](apk/First_application_copy.aia) et toutes les informations liées à l'application son dans [le dossier Application Android](apk)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](apk/First_application_copy.apk) et toutes les informations liées à l'application son dans [le dossier Application Android](apk)
 
 ## Réalisation du shield
 
