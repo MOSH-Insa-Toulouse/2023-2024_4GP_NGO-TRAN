@@ -165,7 +165,12 @@ Toutes les ressources utilisées pour la conception du PCB, y compris les emprei
 ![blocinitial](apk/Bloc-initialisation.png)
 ![blocfonctionnement](apk/block-fonctionnement.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](apk/First_application_copy.apk) et toutes les informations liées à l'application son dans [le dossier Application Android](apk)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L'application peut s'installer [sous android ici](apk/First_application_copy.apk) et toutes les informations liées à l'application son dans [le dossier Application Android](apk).
+
+### Résumé des particularités de nos programmes et applications
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nos programmes et applications se distinguent par une optimisation supérieure à celle d'autres projets. Nous utilisons 2 octets de données pour la transmission, préservant ainsi la résolution et simplifiant la programmation de l'encodeur rotatif, contrairement à d'autres projets qui utilisent 1 octet et sacrifient la résolution.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De plus, notre application développée sur la plateforme du MIT emploie la commande "read" pour vider le tampon avant la lecture des données, garantissant ainsi la fiabilité des données lues et l'affichage précis des graphiques.
 
 ## Réalisation du shield
 
